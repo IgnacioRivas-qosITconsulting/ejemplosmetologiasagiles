@@ -1,4 +1,4 @@
-print("Ejercicios Operadores ")
+
 '''
 **Nota:** Estos ejercicios son optativos para hacer al final de la unidad y están pensados para apoyar tu aprendizaje.
 
@@ -78,27 +78,103 @@ numero_magico = numero_magico*numero_usuario
 print("Este es el numero_magico: ", numero_magico)
 '''
 
-print("Ejercicios Flujos de Datos ")
+print("=====================================")
 '''
 Realiza un programa que lea dos números por teclado y permita elegir entre 3 opciones en un menú:
-
 Mostrar una suma de los dos números.
-
 Mostrar una resta de los dos números (el primero menos el segundo).
-
 Mostrar una multiplicación de los dos números.
-
 En caso de no introducir una opción válida, el programa informará de que no es correcta.
 '''
+
+'''
+primer_numero= float(input("Introduce el primer numero: "))
+
+segundo_numero = float(input("Introduce el segundo numero: "))
+
+
+
+opcion_valida = False
+
+while not opcion_valida:
+    print("===Mini calculadora en Python===")
+    print("1.- Sumar los dos numeros")
+    print("2.- Restar los dos numeros")
+    print("3.- Multiplicar los dos numeros")
+    print("4.- Salir")
+
+escoger = str(input("Elige una opcion 1 / 2 / 3 / 4 ")).strip()
+if escoger == '1':
+        resultado = primer_numero + segundo_numero
+        print("Resultado: ",resultado)
+        print("¿Quieres hacer otra operacion?Y/N")
+        escoger = str(input()).strip().lower()
+        if escoger == 'y':
+            opcionValida = False
+        else:
+            opcionValida = True
+elif escoger == '2':
+        resultado = primer_numero - segundo_numero
+        print("Resultado: ",resultado)
+        print("¿Quieres hacer otra operacion?Y/N")
+        escoger = str(input()).strip().lower()
+        if escoger == 'y':
+            opcionValida = False
+        else:
+            opcionValida = True
+elif escoger == '3':
+        resultado = primer_numero*segundo_numero
+        print("Resultado: ",resultado)
+        print("¿Quieres hacer otra operacion?Y/N")
+        escoger = str(input()).strip().lower()
+        if escoger == 'y':
+            opcionValida = False
+        else:
+            opcionValida = True
+elif escoger == '4':
+        print("Saliste del Programa Calculadora")
+        opcion_valida == True
+else:
+        print("Introduce una opción valida 1 / 2 / 3 / 4")
+        opcion_valida == False
+    
+''' 
+
 '''
 Realiza un programa que lea un número impar por teclado. Si el usuario no introduce un número impar, debe repetirse el proceso hasta que lo introduzca correctamente.
 '''
+
+impar = False
+
+while not impar:
+      numero = int(input("Introduce un numero impar colega: "))
+      if numero % 2 != 0:
+            impar  =True
+            
+      else:
+            print("Introduce un numero impar maricon")
+           
+print("El numero", numero, "es impar")
+
 '''
 Realiza un programa que sume todos los números enteros pares desde el 0 hasta el 100:
 '''
+resultado=sum(range(0,101,2))
+print( "El resultado es: ", resultado)
+
+
+
+
+
+
 '''
 Sugerencia: Puedes utilizar las funciones sum() y range() para hacerlo más fácil. El tercer parámetro en la función range(inicio, fin, salto) indica un salto de números, pruébalo.
 '''
+
+
+
+
+
 '''
 Realiza un programa que pida al usuario cuantos números quiere introducir. Luego lee todos los números y realiza una media aritmética.
 '''
